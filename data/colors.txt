@@ -1,0 +1,17 @@
+hair color
+gold
+black
+wine
+purple
+red
+pink
+brown
+green
+
+
+bundles
+
+types
+curly
+wavy
+straight

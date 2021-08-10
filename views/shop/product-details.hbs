@@ -1,0 +1,108 @@
+ {{!-- breadcrum --}}
+ <div class="breadcrumb-area bg-gray">
+            <div class="container">
+                <div class="breadcrumb-content text-center">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="active">product details </li>
+                    </ul>
+                </div>
+            </div>
+</div>
+
+{{!-- single product display --}}
+
+ <div class="product-details-area pt-120 pb-115">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="product-details-tab">
+                            <img src="{{product.image}}" alt="" srcset="">
+                            {{!-- <div class="product-dec-slider-small product-dec-small-style1">
+                                <div class="product-dec-small active">
+                                    <img src="assets/images/product-details/small-1.jpg" alt="">
+                                </div>
+                                <div class="product-dec-small">
+                                    <img src="assets/images/product-details/small-2.jpg" alt="">
+                                </div>
+                                <div class="product-dec-small">
+                                    <img src="assets/images/product-details/small-3.jpg" alt="">
+                                </div>
+                                <div class="product-dec-small">
+                                    <img src="assets/images/product-details/small-4.jpg" alt="">
+                                </div>
+                                <div class="product-dec-small">
+                                    <img src="assets/images/product-details/small-2.jpg" alt="">
+                                </div>
+                            </div> --}}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="product-details-content pro-details-content-mrg">
+                            <h2 class="mb-5">{{product.desc}}</h2>
+                          
+                            <div class="product-details-meta">
+                                <ul>
+                                    <li><span>Brand:</span> <a href="#">{{product.brand}},</a> </li>
+                                    <li><span>Color:</span> <a href="#">{{product.color}},</a> </li>
+                                    <li><span>Bundle:</span> <a href="#">{{product.bundle}},</a> </li>
+                                    <li class="my-5"><span>Price:</span> <a href="#">N {{product.price}},</a> </li>
+                                </ul>
+                            </div>
+                            <div class="pro-details-action-wrap">
+                                <div class="pro-details-add-to-cart">
+                                    <a title="Add to Cart" href="#">Add To Cart </a>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+
+{{!-- related product --}}
+  <div class="related-product pb-115">
+            <div class="container">
+                <div class="section-title mb-45 text-center">
+                    <h2>Related Product</h2>
+                </div>
+                <div class="related-product-active">
+                    {{#if relatedProducts}}
+                        {{#each relatedProducts}}
+                        <div class="product-plr-1">
+                        <div class="single-product-wrap">
+                            <div class="product-img product-img-zoom mb-15">
+                                <a href="product-details.html">
+                                    <img src="{{this.image}}" alt="" style="max-height:180px ;">
+                                </a>
+                            
+                            </div>
+                            <div class="product-content-wrap-2 text-center">
+                               
+                                <h3><a href="product-details.html">{{this.desc}}</a></h3>
+                                <div class="product-price-2">
+                                    <span>N {{this.price}}</span>
+                                </div>
+                            </div>
+                            <div class="product-content-wrap-2 product-content-position text-center">
+                             
+                                <h3><a href="product-details.html">{{this.desc}}</a></h3>
+                                <div class="product-price-2">
+                                    <span>N {{this.price}}</span>
+                                </div>
+                                <div class="pro-add-to-cart">
+                                    <button title="Add to Cart">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        {{/each}}
+                    {{/if}}
+                    
+                
+                </div>
+            </div>
+</div>

@@ -1,0 +1,40 @@
+ <div class="col-lg-3">
+                        <div class="sidebar-wrapper sidebar-wrapper-mrg-right">
+                            <div class="sidebar-widget mb-40">
+                                <h4 class="sidebar-widget-title">Search </h4>
+                                <div class="sidebar-search">
+                                    <form class="sidebar-search-form" action="#">
+                                        <input type="text" placeholder="Search here...">
+                                        <button>
+                                            <i class="icon-magnifier"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget shop-sidebar-border mb-35 pt-40">
+                                <h4 class="sidebar-widget-title">Brands </h4>
+                                <div class="shop-catigory">
+                                     <ul>
+                                        {{#if brands}}
+                                            {{#each brands}}
+                                                <li><a href="/shop/brands/{{this}}">{{this}}</a></li>
+                                            {{/each}}
+                                        {{/if}}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget shop-sidebar-border mb-35 pt-40">
+                                <h4 class="sidebar-widget-title">Color </h4>
+                                <div class="shop-catigory">
+                                    <ul>
+                                      {{#if colors}}
+                                            {{#each colors}}
+                                                <li><a href="/shop/color/{{this}}">{{this}}</a></li>
+                                            {{/each}}
+                                        {{/if}}
+                                    </ul>
+                                </div>
+                            </div>
+                      
+                        </div>
+                    </div>
