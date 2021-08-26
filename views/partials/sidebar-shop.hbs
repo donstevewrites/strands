@@ -1,40 +1,33 @@
- <div class="col-lg-3">
+<div class="col-lg-3">
     <div class="sidebar-wrapper sidebar-wrapper-mrg-right">
-        <div class="sidebar-widget mb-40">
-            <h4 class="sidebar-widget-title">Search </h4>
-            <div class="sidebar-search">
-                <form class="sidebar-search-form" action="#">
-                    <input type="text" placeholder="Search here...">
-                    <button>
-                        <i class="icon-magnifier"></i>
-                    </button>
-                </form>
-            </div>
+        <div class="sidebar-widget mb-2">
+            <h4 class="sidebar-widget-title"><i class="icon-handbag"></i> Shop By : </h4>
         </div>
-        <div class="sidebar-widget shop-sidebar-border mb-35 pt-40">
-            <h4 class="sidebar-widget-title">Brands </h4>
-            <div class="shop-catigory">
-                    <ul>
-                    {{#if brands}}
-                        {{#each brands}}
-                            <li><a href="/shop/brands/{{this}}">{{this}}</a></li>
-                        {{/each}}
-                    {{/if}}
-                </ul>
-            </div>
+
+        <button class="accordion">Brands</button>
+        <div class="panel w-100">
+            <ul class="list-group list-group-flush">
+                {{#if brands}}
+                {{#each brands}}
+                <li class="list-group-item border-0 py-1"><a class="d-block" href="/shop/color/{{this}}">{{this}}</a>
+                </li>
+                {{/each}}
+                {{/if}}
+            </ul>
         </div>
-        <div class="sidebar-widget shop-sidebar-border mb-35 pt-40">
-            <h4 class="sidebar-widget-title">Color </h4>
-            <div class="shop-catigory">
-                <ul>
-                    {{#if colors}}
-                        {{#each colors}}
-                            <li><a href="/shop/color/{{this}}">{{this}}</a></li>
-                        {{/each}}
-                    {{/if}}
-                </ul>
-            </div>
+
+        <button class="accordion">Colors</button>
+        <div class="panel w-100">
+            <ul class="list-group list-group-flush">
+                {{#if colors}}
+                {{#each colors}}
+                <li class="list-group-item border-0 py-1"><a class="d-block" href="/shop/color/{{this}}">{{this}}</a>
+                </li>
+                {{/each}}
+                {{/if}}
+            </ul>
         </div>
-    
+
+
     </div>
 </div>
