@@ -1,7 +1,8 @@
 const featuredProducts =[
     {
         id: 1,
-        desc : "Silky Straight Lace Frontal",
+        description : "Silky Straight Lace Frontal",
+        quantity:"5",
         brand : 'adorable',
         color: 'brown',
         bundle: '1 bundle',
@@ -10,7 +11,8 @@ const featuredProducts =[
     },
     {
         id: 2,
-        desc : "Silky Straight Lace Frontal",
+        description : "Silky Straight Lace Frontal",
+        quantity:"5",
         brand : 'adorable',
         color: 'brown',
         bundle: '1 bundle',
@@ -19,7 +21,8 @@ const featuredProducts =[
     },
     {
         id: 3,
-        desc : "Silky Straight Lace Frontal",
+        description : "Silky Straight Lace Frontal",
+        quantity:"5",
         brand : 'adorable',
         color: 'brown',
         bundle: '1 bundle',
@@ -28,7 +31,8 @@ const featuredProducts =[
     },
     {
         id: 4,
-        desc : "Silky Straight Lace Frontal",
+        description : "Silky Straight Lace Frontal",
+        quantity:"5",
         brand : 'adorable',
         color: 'brown',
         bundle: '1 bundle',
@@ -37,7 +41,8 @@ const featuredProducts =[
     },
     {
         id: 5,
-        desc : "Silky Straight Lace Frontal",
+        description : "Silky Straight Lace Frontal",
+        quantity:"5",
         brand : 'adorable',
         color: 'brown',
         bundle: '1 bundle',
@@ -46,7 +51,8 @@ const featuredProducts =[
     },
     {
         id: 6,
-        desc : "Silky Straight Lace Frontal",
+        description : "Silky Straight Lace Frontal",
+        quantity:"5",
         brand : 'adorable',
         color: 'brown',
         bundle: '1 bundle',

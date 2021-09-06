@@ -68,7 +68,7 @@
   margin-left: 5px;
 }
 
-.active:after {
+.active-accordion:after {
   content: "\2212";
 }
 
@@ -79,7 +79,18 @@
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
-
+.single-add-to-cart {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1;
+  background-color: #000000;
+  padding: 18px 50px 17px;
+}
+.single-add-to-cart:hover {
+  background-color: #ff2f2f;
+}
 /* ACCORDING END CSS */
 @media only screen and (max-width: 767px) {
   .mobile-header-active .clickalbe-sidebar-wrap .sidebar-close {

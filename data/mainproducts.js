@@ -1,7 +1,7 @@
 const products =[
     {
         id: 1,
-        desc : "Silky Straight Lace Frontal",
+        description : "Silky Straight Lace Frontal",
         brand : 'adorable',
         color: 'brown',
         bundle: '1 bundle',
@@ -10,7 +10,7 @@ const products =[
     },
     {
         id: 2,
-        desc : "Silky Straight Lace Frontal",
+        description : "Silky Straight Lace Frontal",
         brand : 'adorable',
         color: 'brown',
         bundle: '1 bundle',
@@ -19,7 +19,7 @@ const products =[
     },
     {
         id: 3,
-        desc : "Silky Straight Lace Frontal",
+        description : "Silky Straight Lace Frontal",
         brand : 'adorable',
         color: 'brown',
         bundle: '1 bundle',
@@ -28,7 +28,7 @@ const products =[
     },
     {
         id: 4,
-        desc : "Silky Straight Lace Frontal",
+        description : "Silky Straight Lace Frontal",
         brand : 'adorable',
         color: 'brown',
         bundle: '1 bundle',
@@ -37,7 +37,7 @@ const products =[
     },
     {
         id: 5,
-        desc : "Silky Straight Lace Frontal",
+        description : "Silky Straight Lace Frontal",
         brand : 'adorable',
         color: 'brown',
         bundle: '1 bundle',
@@ -46,7 +46,7 @@ const products =[
     },
     {
         id: 6,
-        desc : "Silky Straight Lace Frontal",
+        description : "Silky Straight Lace Frontal",
         brand : 'adorable',
         color: 'brown',
         bundle: '1 bundle',
@@ -55,7 +55,7 @@ const products =[
     },
     {
         id: 7,
-        desc : "Silky Straight Lace Frontal",
+        description : "Silky Straight Lace Frontal",
         brand : 'adorable',
         color: 'brown',
         bundle: '1 bundle',
@@ -64,7 +64,7 @@ const products =[
     },
     {
         id: 8,
-        desc : "Silky Straight Lace Frontal",
+        description : "Silky Straight Lace Frontal",
         brand : 'adorable',
         color: 'brown',
         bundle: '1 bundle',
@@ -73,7 +73,7 @@ const products =[
     },
     {
         id: 9,
-        desc : "Silky Straight Lace Frontal",
+        description : "Silky Straight Lace Frontal",
         brand : 'adorable',
         color: 'brown',
         bundle: '1 bundle',
@@ -82,7 +82,7 @@ const products =[
     },
     {
         id: 10,
-        desc : "Silky Straight Lace Frontal",
+        description : "Silky Straight Lace Frontal",
         brand : 'adorable',
         color: 'brown',
         bundle: '1 bundle',
@@ -91,7 +91,7 @@ const products =[
     },
     {
         id: 11,
-        desc : "Silky Straight Lace Frontal",
+        description : "Silky Straight Lace Frontal",
         brand : 'adorable',
         color: 'brown',
         bundle: '1 bundle',

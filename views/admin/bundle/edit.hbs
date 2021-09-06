@@ -1,0 +1,33 @@
+<div class="row d-flex justify-content-center w-100 align-content-center mt-5" style="min-height: 90vh;">
+    <div class="col-md-6 col-sm-8 col-xs-12">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between">
+                <div>
+                    <i class="fas fa-table me-1"></i>
+                    Update Bundle
+                </div>
+
+            </div>
+            <div class="card-body">
+                <form action="{{strandAdmin}}/bundles/edit" method="POST">
+                    <div class="form-group">
+                        <input type="hidden"name="_csrf" value="{{csrfToken}}">
+                    </div>
+                    <div class="form-group row mb-2">
+                        <label for="bundleName" class="col-sm-4 col-form-label">Bundle Name</label>
+                        <div class="col-sm-8">
+                            {{#if bundle}}
+                                <input type="hidden"name="_id" value="{{bundle._id}}">
+                                <input type="text" class="form-control mb-2" name="bundleName" value="{{bundle.bundleName}}">
+                            {{/if}}
+                        </div>
+                    </div>
+
+                    <div class="form-group row d-flex justify-content-end">
+                        <div class="col-8">
+                            <button type="submit" class="btn btn-primary w-100">Update Bundle</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>

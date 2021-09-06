@@ -1,0 +1,120 @@
+<div class="row d-flex justify-content-center w-100 align-content-center mt-5" style="min-height: 90vh;">
+    <div class="col-md-6 col-sm-8 col-xs-12">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between">
+                <div>
+                    <i class="fas fa-table me-1"></i>
+                    Products Manager
+                </div>
+
+            </div>
+            <div class="card-body">
+                <form action="{{strandAdmin}}/products/edit/?_csrf={{csrfToken}}" method="POST"
+                    enctype="multipart/form-data">
+                    {{#if product}}
+                    <input type="hidden"name="_id" value="{{product._id}}">
+                    <div class="form-group row mb-2">
+                        <label for="exampleFormControlFile1" class="col-sm-4 col-form-label">Product Image</label>
+                        <div class="col-sm-8">
+                            <div class="row">
+                                <div class="col-md-6">
+                                <img
+                                style="height: 200px"
+                                class="img-thumbnail" 
+                                src="/images/products/{{product.image}}"
+                                >
+                               </div>
+                               <div class="col-md-6">
+                                <input type="file" class="form-control-file" name="productImage">
+                               </div>
+                             
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <label for="productName" class="col-sm-4 col-form-label">Product Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control mb-2" id="productName" name="productName" value="{{product.name}}">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <label for="productName" class="col-sm-4 col-form-label">Product Description</label>
+                        <div class="col-sm-8">
+                            <textarea name="productDesc" id="productDesc" rows="2" class="form-control mb-2">{{product.description}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <label for="productPrice" class="col-sm-4 col-form-label">Product Price</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control mb-2" name="productPrice" value="{{product.price}}">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <label for="productQuantity" class="col-sm-4 col-form-label">Product Quantity</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control mb-2" name="productQuantity" value="{{product.quantity}}">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <label for="productBrand" class="col-sm-4 col-form-label">Product Brand</label>
+                        <div class="col-sm-8">
+                            <select name="productBrand" class="custom-select form-control mb-2">
+                                {{#each brands as | brand |}}
+                                    <option
+                                    {{#if (isMatched this.brandName ../product.brand)}}selected{{else}}''{{/if}} 
+                                    value="{{brand.brandName}}"
+                                    >{{this.brandName}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <label for="productColor" class="col-sm-4 col-form-label">Product Color</label>
+                        <div class="col-sm-8">
+                            <select name="productColor" class="custom-select form-control mb-2">
+                                  {{#each colors as |color|}}
+                                    <option 
+                                    {{#if (isMatched color.colorName ../product.color)}}selected{{else}}''{{/if}}
+                                    value="{{this.colorName}}">{{this.colorName}}</option>
+                                {{/each}}>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <label for="productBundle" class="col-sm-4 col-form-label">Product Bundle</label>
+                        <div class="col-sm-8">
+                            <select name="productBundle" class="custom-select form-control mb-2">
+                                  {{#each bundle}}
+                                    <option 
+                                    {{#if (isMatched this.bundleName ../product.bundle)}}selected{{else}}''{{/if}}
+                                    value="{{this.bundleName}}">{{this.bundleName}}</option>
+                                  {{/each}}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <label for="productType" class="col-sm-4 col-form-label">Product Type</label>
+                        <div class="col-sm-8">
+                            <select name="productType" class="custom-select form-control mb-2">
+                                
+                                    {{#each hairtype}}
+                                         <option 
+                                        {{#if (isMatched this.typeName ../product.hairType)}}selected{{else}}''{{/if}}
+                                         value="{{this.typeName}}">{{this.typeName}}</option>
+                                   {{/each}}
+                            </select>
+                        </div>
+                    </div>
+                    {{/if}}
+                    <div class="form-group row d-flex justify-content-end">
+                        <div class="col-8">
+                            <button type="submit" class="btn btn-primary w-100">Create Product</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -6,27 +6,27 @@
             <h2><span>New</span> Arrivals</h2>
             <p>We alway up to date new arrivals follows trending</p>
         </div>
-             {{#if featuredProducts}}
-                <div
+        {{#if featuredProducts}}
+        <div
             class="product-slider-active dot-style-2 dot-style-2-position-static dot-style-2-mrg-1 dot-style-2-active-black">
             {{#each featuredProducts}}
-                <div class="product-plr-1">
-                        <div class="single-product-wrap mb-35">
-                            <div class="product-img product-img-zoom mb-20">
-                                <a href="product-details.html">
-                                    <img src="{{this.image}}" alt="" style="max-height: 180px;">
-                                </a>
-                            </div>
-                            <div class="product-content-2 text-center">
-                                <h3><a href="product-details.html"><span>{{this.desc}}</span></a></h3>
-                            </div>
-                        </div>
+            <div class="product-plr-1">
+                <div class="single-product-wrap mb-35">
+                    <div class="product-img product-img-zoom mb-20">
+                        <a href="/shop/product/{{this.id}}">
+                            <img src="{{this.image}}" alt="" style="max-height: 180px;">
+                        </a>
                     </div>
-            {{/each}}
-              
+                    <div class="product-content-2 text-center">
+                        <h3><a href="product-details.html"><span>{{this.description}}</span></a></h3>
+                    </div>
+                </div>
             </div>
-            {{/if}}
-       
+            {{/each}}
+
+        </div>
+        {{/if}}
+
     </div>
 </div>
 <div class="product-area pb-80 mt-80">
@@ -48,38 +48,48 @@
                 <div class="row">
                     {{#if featuredProducts}}
                     {{#each featuredProducts}}
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                            <div class="single-product-wrap mb-35">
-                                <div class="product-img product-img-zoom mb-15">
-                                    <a href="/shop/product/{{this.id}}">
-                                        <img src="{{this.image}}" alt="" style="max-height: 180px;">
-                                    </a>
-                            
-                                </div>
-                                <div class="product-content-wrap-2 text-center">
-                                
-                                    <h3><a href="product-details.html">{{this.desc}}</a></h3>
-                                    <div class="product-price-2">
-                                        <span>N {{this.price}}</span>
-                                    </div>
-                                </div>
-                                <div class="product-content-wrap-2 product-content-position text-center">
-                            
-                                    {{!-- <h3><a href="product-details.html">Basic Joggin Shorts</a></h3>
-                                    <div class="product-price-2">
-                                        <span>$20.50</span>
-                                    </div> --}}
-                                    <div class="pro-add-to-cart">
-                                        <button title="Add to Cart">Add To Cart</button>
-                                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="single-product-wrap mb-35">
+                            <div class="product-img product-img-zoom mb-15">
+                                <a href="/shop/product/{{this.id}}">
+                                    <img src="{{this.image}}" alt="" style="max-height: 180px;">
+                                </a>
+
+                            </div>
+                            <div class="product-content-wrap-2 text-center">
+
+                                <h3><a href="product-details.html">{{this.description}}</a></h3>
+                                <div class="product-price-2">
+                                    <span>N {{this.price}}</span>
                                 </div>
                             </div>
+                            <div class="product-content-wrap-2 product-content-position text-center">
+
+                                {{!-- <h3><a href="product-details.html">Basic Joggin Shorts</a></h3>
+                                <div class="product-price-2">
+                                    <span>$20.50</span>
+                                </div> --}}
+                                <form class="add-to-cart" action="/shop/product/cart/add" method="POST">
+                                    <div class="alert alert-success text-center d-none" role="alert">
+                                        A simple primary alert—check it out!
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                                    </div>
+                                    <input type="hidden" name="productId" value="{{this.id}}">
+                                    <input type="hidden" name="quantity" value="1" />
+                                    <div class="pro-add-to-cart">
+                                        <button type="submit" title="Add to Cart">Add To Cart</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
+                    </div>
                     {{/each}}
-                    
+
                     {{/if}}
-                    
-             
+
+
                 </div>
             </div>
 

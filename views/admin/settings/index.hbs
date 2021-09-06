@@ -1,0 +1,146 @@
+<div class="row mt-5 p-4">
+    <div class="col-md-6">
+        <div class="card mb-4">
+             <div class="card-header d-flex justify-content-between">
+                <div>
+                    <i class="fas fa-table me-1"></i>
+                    Brands
+                </div>
+               <a href="{{ strandAdmin }}/brands/add" class="btn btn-primary btn-sm">
+                Add Brand
+               </a>
+            </div>
+            <div class="card-body">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Brand Name</th>
+                            <th scope="col">Settings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each brands}}
+                            <tr>
+                                <th scope="row">{{@key}}</th>
+                                <td>{{this.brandName}}</td>
+                                <td><a href="/strand/admin/brands/edit/{{this._id}}" class="btn btn-warning btn-sm text-white">
+                                        edit
+                                    </a></td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-4">
+              <div class="card-header d-flex justify-content-between">
+                <div>
+                    <i class="fas fa-table me-1"></i>
+                    Colors
+                </div>
+               <a href="{{ strandAdmin }}/colors/add" class="btn btn-primary btn-sm">
+                Add Color
+               </a>
+            </div>
+            <div class="card-body">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Color Name</th>
+                            <th scope="col">Settings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each colors}}
+                        <tr>
+                            <th scope="row">{{@key}}</th>
+                            <td>{{this.colorName}}</td>
+                            <td><a href="/strand/admin/colors/edit/{{this._id}}" class="btn btn-warning btn-sm text-white">
+                                    edit
+                                </a></td>
+                        </tr>
+                        {{/each}}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mt-5 p-4">
+    <div class="col-md-6">
+        <div class="card mb-4">
+             <div class="card-header d-flex justify-content-between">
+                <div>
+                    <i class="fas fa-table me-1"></i>
+                    Bundle
+                </div>
+               <a href="{{ strandAdmin }}/bundles/add" class="btn btn-primary btn-sm">
+                Add Bundle
+               </a>
+            </div>
+            <div class="card-body">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Bundle Name</th>
+                            <th scope="col">Settings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each bundle}}
+                        <tr>
+                            <th scope="row">{{@key}}</th>
+                            <td>{{this.bundleName}}</td>
+                            <td><a href="/strand/admin/bundles/edit/{{this._id}}" class="btn btn-warning btn-sm text-white">
+                                    edit
+                                </a></td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-4">
+             <div class="card-header d-flex justify-content-between">
+                <div>
+                    <i class="fas fa-table me-1"></i>
+                    Types
+                </div>
+               <a href="{{ strandAdmin }}/types/add" class="btn btn-primary btn-sm">
+                Add Type
+               </a>
+            </div>
+            <div class="card-body">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Type Name</th>
+                            <th scope="col">Settings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each hairtype}}
+                        <tr>
+                            <th scope="row">{{@key}}</th>
+                            <td>{{this.typeName}}</td>
+                            <td><a href="/strand/admin/types/edit/{{this._id}}" class="btn btn-warning btn-sm text-white">
+                                    edit
+                                </a></td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

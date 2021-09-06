@@ -1,75 +1,99 @@
-
 <div class="row d-flex justify-content-center w-100 align-content-center mt-5" style="min-height: 90vh;">
     <div class="col-md-6 col-sm-8 col-xs-12">
-             <div class="card mb-4">
+        <div class="card mb-4">
             <div class="card-header d-flex justify-content-between">
                 <div>
                     <i class="fas fa-table me-1"></i>
-                    Products Manager 
+                    Products Manager
                 </div>
-              
+
             </div>
             <div class="card-body">
-                <form>
+                <form action="{{strandAdmin}}/products/add/?_csrf={{csrfToken}}" method="POST"
+                    enctype="multipart/form-data">
+                    <div class="form-group row mb-2">
+                        <label for="exampleFormControlFile1" class="col-sm-4 col-form-label">Example file input</label>
+                        <div class="col-sm-8">
+                            <input type="file" class="form-control-file" name="productImage">
+                        </div>
+                    </div>
                     <div class="form-group row mb-2">
                         <label for="productName" class="col-sm-4 col-form-label">Product Name</label>
                         <div class="col-sm-8">
-                        <input type="text" class="form-control" id="productName" name="productName">
+                            <input type="text" class="form-control mb-2" id="productName" name="productName">
                         </div>
                     </div>
                     <div class="form-group row mb-2">
                         <label for="productName" class="col-sm-4 col-form-label">Product Description</label>
                         <div class="col-sm-8">
-                        <textarea name="productDesc" id="productDesc"  rows="2" class="form-control"></textarea>
+                            <textarea name="productDesc" id="productDesc" rows="2" class="form-control mb-2"></textarea>
                         </div>
                     </div>
                     <div class="form-group row mb-2">
-                        <label for="productName" class="col-sm-4 col-form-label">Product Price</label>
+                        <label for="productPrice" class="col-sm-4 col-form-label">Product Price</label>
                         <div class="col-sm-8">
-                        <input type="text" class="form-control" id="productName" name="productName">
+                            <input type="text" class="form-control mb-2" name="productPrice">
                         </div>
                     </div>
-                     <div class="form-group row mb-2">
-                        <label for="productName" class="col-sm-4 col-form-label">Product Quantity</label>
+                    <div class="form-group row mb-2">
+                        <label for="productQuantity" class="col-sm-4 col-form-label">Product Quantity</label>
                         <div class="col-sm-8">
-                        <input type="text" class="form-control" id="productName" name="productName">
+                            <input type="text" class="form-control mb-2" name="productQuantity">
                         </div>
                     </div>
-                     <div class="form-group row mb-2">
-                        <label for="productName" class="col-sm-4 col-form-label">Product Brand</label>
+                    <div class="form-group row mb-2">
+                        <label for="productBrand" class="col-sm-4 col-form-label">Product Brand</label>
                         <div class="col-sm-8">
-                        <input type="text" class="form-control" id="productName" name="productName">
+                            <select name="productBrand" class="custom-select form-control mb-2">
+                                <option selected>Select Product Brand</option>
+                                {{#each brands}}
+                                <option value="{{this.brandName}}">{{this.brandName}}</option>
+                                {{/each}}
+                            </select>
                         </div>
                     </div>
-                     <div class="form-group row mb-2">
-                        <label for="productName" class="col-sm-4 col-form-label">Product Color</label>
+                    <div class="form-group row mb-2">
+                        <label for="productColor" class="col-sm-4 col-form-label">Product Color</label>
                         <div class="col-sm-8">
-                        <input type="text" class="form-control" id="productName" name="productName">
+                            <select name="productColor" class="custom-select form-control mb-2">
+                                <option selected>Select Product Color</option>
+                                  {{#each colors}}
+                                    <option value="{{this.colorName}}">{{this.colorName}}</option>
+                                {{/each}}>
+                            </select>
                         </div>
                     </div>
-                     <div class="form-group row mb-2">
-                        <label for="productName" class="col-sm-4 col-form-label">Product Bundle</label>
+                    <div class="form-group row mb-2">
+                        <label for="productBundle" class="col-sm-4 col-form-label">Product Bundle</label>
                         <div class="col-sm-8">
-                        <input type="text" class="form-control" id="productName" name="productName">
+                            <select name="productBundle" class="custom-select form-control mb-2">
+                                <option selected>Select Product Bundle</option>
+                                  {{#each bundle}}
+                                    <option value="{{this.bundleName}}">{{this.bundleName}}</option>
+                                  {{/each}}
+                            </select>
                         </div>
                     </div>
-                     <div class="form-group row mb-2">
-                        <label for="productName" class="col-sm-4 col-form-label">Product Type</label>
+                    <div class="form-group row mb-2">
+                        <label for="productType" class="col-sm-4 col-form-label">Product Type</label>
                         <div class="col-sm-8">
-                        <input type="text" class="form-control" id="productName" name="productName">
+                            <select name="productType" class="custom-select form-control mb-2">
+                                <option selected>Select Product Type</option>
+                                    {{#each hairtype}}
+                                         <option value="{{this.typeName}}">{{this.typeName}}</option>
+                                   {{/each}}
+                            </select>
                         </div>
                     </div>
-                 
+
                     <div class="form-group row d-flex justify-content-end">
                         <div class="col-8">
-                        <button type="submit" class="btn btn-primary w-100">Create Product</button>
+                            <button type="submit" class="btn btn-primary w-100">Create Product</button>
                         </div>
                     </div>
-                    </form>
+                </form>
             </div>
         </div>
 
     </div>
 </div>
-
-

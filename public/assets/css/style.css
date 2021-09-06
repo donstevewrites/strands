@@ -18355,13 +18355,12 @@ h3.cart-page-title {
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .cart-table-content table tbody > tr {
-    width: 50%;
-    float: left;
+    width: 100%;
   }
 }
 
 .cart-table-content table tbody > tr td.product-thumbnail {
-  width: 150px;
+  width: 100px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -18488,7 +18487,7 @@ h3.cart-page-title {
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .cart-table-content table tbody > tr td {
-    text-align: left;
+    /* text-align: left; */
     padding: 6px 20px 6px 20px;
   }
 }

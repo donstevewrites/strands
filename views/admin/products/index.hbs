@@ -21,24 +21,20 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                         <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
-                            <td>$320,800</td>
+                        {{#each products}}
+                            <tr>
+                                <td>{{this.name}}</td>
+                                <td>{{this.description}}</td>
+                                <td>{{this.quantity}}</td>
+                                <td>{{this.price}}</td>
+                                <td>{{this.brand}}</td>
+                                <td><a href="/strand/admin/products/edit/{{this._id}}" class="btn btn-warning btn-sm text-white">
+                                        edit
+                                    </a></td>
+                            </tr>
+                        {{/each}}
                         </tr>
 
                     </tbody>
